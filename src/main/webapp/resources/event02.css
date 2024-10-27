@@ -1,0 +1,44 @@
+@charset "UTF-8";
+element.style {
+    padding-top: 173px !important;
+}
+#ivStyle * {
+    letter-spacing: 0px;
+}
+#wrap {
+    padding-top: 115px !important;
+}
+body, html, :lang(ko) {
+    font-family: 'Noto Sans KR', sans-serif;
+}
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, input, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video, fieldset {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
+    outline: 0;
+}
+* {
+    box-sizing: border-box;
+}
+div {
+    display: block;
+    unicode-bidi: isolate;
+}
+body, h1, h2, h3, h4, h5, h6, table, pre, xmp, plaintext, listing, input, textarea, select, button, a {
+    font-family: inherit;
+    line-height: normal;
+}
+style attribute {
+    --vh: 6.95px;
+    --vh2: 6.95px;
+    --topBanner: 0px;
+    --header: 0px;
+    --gnb: 0px;
+    --footer: 0px;
+    --vw: 4.43px;
+}
+html {
+    font-family: 'Noto Sans KR', sans-serif;
+    overflow-x: hidden;
+}
