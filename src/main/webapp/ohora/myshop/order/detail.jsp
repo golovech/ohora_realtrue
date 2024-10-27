@@ -8,350 +8,12 @@
 <title>Order Detail</title>
 <link rel="shortcut icon" type="image/x-icon" href="http://localhost/ohora/resources/ohora.ico">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-<link rel="stylesheet" href="http://localhost/ohora/resources/event01.css">
-<link rel="stylesheet" href="http://localhost/ohora/resources/event02.css">
+<link rel="stylesheet" href="http://localhost/ohora/resources/detail.css">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<style>
-
-</style>
-<style>
-body, html, :lang(ko) {
-    font-family: 'Noto Sans KR', sans-serif;
-}
-#ivStyle * {
-    letter-spacing: 0px;
-}
-.SP_pageGuideText_wrap {
-	background: #fff;
-}
-div {
-    display: block;
-    unicode-bidi: isolate;
-}
-#contents {
-    position: relative;
-    min-height: 670px;
-}
-.SP_layoutFix {
-    width: 1200px;
-    margin: 0 auto;
-}
-#SP_mypage_wrap .SP_subSection {
-    padding: 60px 0 30px;
-}
-.SP_subContHeader .SP_subTitle, .SP_subSection .SP_subTitle, .SP_subLoginHeader .SP_subTitle {
-    padding: 5px 0;
-    text-align: center;
-    font-size: 30px;
-}
-body, h1, h2, h3, h4, h5, h6, table, pre, xmp, plaintext, listing, input, textarea, select, button, a {
-    font-family: inherit;
-    line-height: normal;
-}
-h2 {
-    display: block;
-    font-size: 1.5em;
-    margin-block-start: 0.83em;
-    margin-block-end: 0.83em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    font-weight: bold;
-    unicode-bidi: isolate;
-}
-#ivStyle .SP_subContHeader .SP_subTitle span, #ivStyle .SP_subSection .SP_subTitle span, #ivStyle .SP_subLoginHeader .SP_subTitle span {
-    min-width: 100%;
-    font-size: 28px;
-    letter-spacing: -2px !important;
-}
-.SP_subContHeader .SP_subTitle span, .SP_subSection .SP_subTitle span, .SP_subLoginHeader .SP_subTitle span {
-    display: inline-block;
-    position: relative;
-    font-size: 32px;
-    min-width: 1200px;
-    text-transform: lowercase;
-}
-.eng_font, .eng_font * {
-    font-family: 'Libre Baskerville', 'Noto Sans KR', sans-serif !important;
-}
-span, a {
-    font-family: inherit;
-    color: inherit;
-    font-size: inherit;
-}
-form {
-    display: block;
-    margin-top: 0em;
-    unicode-bidi: isolate;
-}
-input[type="hidden" i] {
-    display: none !important;
-}
-input:not([type="image" i], [type="range" i], [type="checkbox" i], [type="radio" i]) {
-    overflow-clip-margin: 0px !important;
-    overflow: clip !important;
-}
-input[type="hidden" i] {
-    appearance: none;
-    background-color: initial;
-    cursor: default;
-    padding: initial;
-    border: initial;
-}
-
-input {
-    text-rendering: auto;
-    color: fieldtext;
-    letter-spacing: normal;
-    word-spacing: normal;
-    line-height: normal;
-    text-transform: none;
-    text-indent: 0px;
-    text-shadow: none;
-    display: inline-block;
-    text-align: start;
-    appearance: auto;
-    -webkit-rtl-ordering: logical;
-    cursor: text;
-    background-color: field;
-    margin: 0em;
-    padding: 1px 0px;
-    border-width: 2px;
-    border-style: inset;
-    border-color: light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
-    border-image: initial;
-    padding-block: 1px;
-    padding-inline: 2px;
-}
-#SP_mypage_wrap .SP_subSection {
-    padding: 60px 0 30px;
-}
-#SP_mypage_wrap .SP_contTitle {
-    display: inline-block;
-    font-size: 23px;
-    font-weight: 500;
-    color: #000;
-    padding: 15px 0 35px;
-}
-.SP_contTitle {
-    padding-bottom: 20px;
-    font-size: 18px;
-    color: #111;
-    font-weight: 700;
-    letter-spacing: -0.5px;
-}
-h1, h3 {
-    margin: 0;
-}
-h3 {
-    display: block;
-    font-size: 1.17em;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    font-weight: bold;
-    unicode-bidi: isolate;
-}
-.SP_tableSt01_isThAndTd {
-    position: relative;
-    width: 100%;
-    /* margin-top: 40px; */
-    /* border-top: 2px solid #111; */
-}
-table {
-    width: 100%;
-    border: 0;
-    border-spacing: 0;
-    border-collapse: collapse;
-}
-table {
-    display: table;
-    border-collapse: separate;
-    box-sizing: border-box;
-    text-indent: initial;
-    unicode-bidi: isolate;
-    border-spacing: 2px;
-    border-color: gray;
-}
-caption {
-    display: none;
-    text-align: -webkit-center;
-    unicode-bidi: isolate;
-}
-colgroup {
-    display: table-column-group;
-    unicode-bidi: isolate;
-}
-col {
-    display: table-column;
-    unicode-bidi: isolate;
-}
-tbody {
-    display: table-row-group;
-    vertical-align: middle;
-    unicode-bidi: isolate;
-    border-color: inherit;
-}
-tr {
-    display: table-row;
-    vertical-align: inherit;
-    unicode-bidi: isolate;
-    border-color: inherit;
-}
-.SP_tableSt01_isThAndTd tr {
-    border-bottom: 1px solid #eeeeee;
-    border-top: 1px solid #eeeeee;
-}
-th {
-    display: table-cell;
-    vertical-align: inherit;
-    font-weight: bold;
-    text-align: -internal-center;
-    unicode-bidi: isolate;
-}
-td {
-    display: table-cell;
-    vertical-align: inherit;
-    unicode-bidi: isolate;
-}
-.SP_tableSt01_isThAndTd td {
-    vertical-align: middle;
-    height: 60px;
-    padding: 10px 0 10px 50px;
-    font-size: 15px;
-    color: #000;
-    text-align: left;
-    line-height: 1.4;
-}
-button {
-    background: transparent;
-    border: 0;
-    outline: 0;
-    padding: 0;
-    margin: 0;
-    cursor: pointer;
-}
-button {
-    appearance: auto;
-    text-rendering: auto;
-    color: buttontext;
-    letter-spacing: normal;
-    word-spacing: normal;
-    line-height: normal;
-    text-transform: none;
-    text-indent: 0px;
-    text-shadow: none;
-    display: inline-block;
-    text-align: center;
-    align-items: flex-start;
-    cursor: default;
-    box-sizing: border-box;
-    background-color: buttonface;
-    margin: 0em;
-    padding-block: 1px;
-    padding-inline: 6px;
-    border-width: 2px;
-    border-style: outset;
-    border-color: buttonborder;
-    border-image: initial;
-}
-.SP_tableSt01_isThAndTd {
-    position: relative;
-    width: 100%;
-    /* margin-top: 40px; */
-    /* border-top: 2px solid #111; */
-}
-colgroup {
-    display: table-column-group;
-    unicode-bidi: isolate;
-}
-.SP_tableSt01_isThAndTd tr {
-    border-bottom: 1px solid #eeeeee;
-    border-top: 1px solid #eeeeee;
-}
-.xans-myshop-orderhistorydetail .ec-base-table .sum th, .xans-myshop-orderhistorydetail .ec-base-table .sum td {
-    font-weight: 500;
-}
-.SP_tableSt01_isThAndTd th, .SP_tableSt01_isThumNail .left {
-    text-align: center;
-}
-.SP_tableSt01_isThAndTd th {
-    vertical-align: middle;
-    height: 46px;
-    font-size: 16px;
-    color: #111;
-    font-weight: 500;
-    background: #eeeeee;
-}
-strong {
-    font-weight: bold;
-}
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, input, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video, fieldset {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    vertical-align: baseline;
-    outline: 0;
-}
-* {
-    box-sizing: border-box;
-}
-.displaynone {
-    display: none !important;
-}
-.SP_cm_btnChange .SP_cm_btn {
-    vertical-align: middle;
-    width: 60px;
-    height: 25px;
-    color: #8d8d8d;
-    line-height: 25px;
-    font-size: 11px;
-}
-.SP_cm_btn.SP_btn_gray_bd {
-    border: 1px solid #ddd;
-}
-.SP_tableSt01_isThAndTd td a {
-    color: #000;
-    /* border: 1px solid #000; */
-    /* padding: 3px 5px; */
-    /* font-size: 12px; */
-}
-.SP_cm_btn {
-    display: inline-block;
-    vertical-align: top;
-    width: calc(33.333% - 10px);
-    height: 45px;
-    line-height: 45px;
-    font-size: 15px;
-    color: #000;
-    background: #fff;
-    text-align: center;
-    box-sizing: border-box;
-}
-a {
-    text-decoration: none;
-}
-a:-webkit-any-link {
-    color: -webkit-link;
-    cursor: pointer;
-    text-decoration: underline;
-}
-
-
-
-
-</style>
 </head>
 <body>
-
 	<div id="container">
 		<div id="contents">
-
-			<script>
-				SMARTPC_GLOBAL_OBJECT.page = 'mypage';
-			</script>
-
-
 			<div id="SP_mypage_wrap" class="order_detail_page">
 				<div class="SP_layoutFix">
 					<div class="SP_subSection">
@@ -367,14 +29,6 @@ a:-webkit-any-link {
 							fw-label="주문번호" fw-msg="" value="20241027-0001930" type="hidden">
 						<div
 							class="xans-element- xans-myshop xans-myshop-orderhistorydetail xans-record-">
-							<!--
-				$print_spec_url = /myshop/order/print/spec.html
-				$print_pg_card_url = /myshop/order/print/pg.html
-				$print_tax_url = /myshop/order/print/tax.html
-				$issue_tax_url = /myshop/order/issue/tax.html
-				$issue_cash_url = /myshop/order/issue/cash.html
-				$select_gift_url = /order/gift_select.html
-			 -->
 							<div class="SP_subSection">
 								<h3 class="SP_contTitle">주문정보</h3>
 								<div class="ec-base-table">
@@ -512,7 +166,7 @@ a:-webkit-any-link {
 											<col style="width: 100px">
 											<col style="width: 95px">
 											<col style="width: 110px">
-											<col style="width: 110px">
+											<col style="width: 120px">
 										</colgroup>
 										<thead>
 											<tr>
@@ -857,7 +511,7 @@ a:-webkit-any-link {
 											</tr>
 											<tr>
 												<th scope="row">받으시는분</th>
-												<td><span>최사랑</span></td>
+												<td><span>고러브</span></td>
 											</tr>
 											<tr class="displaynone">
 												<th scope="row">영문이름</th>
@@ -873,11 +527,11 @@ a:-webkit-any-link {
 											</tr>
 											<tr class="">
 												<th scope="row">우편번호</th>
-												<td><span>08041</span></td>
+												<td><span>00000</span></td>
 											</tr>
 											<tr class="">
 												<th scope="row">주소</th>
-												<td><span>서울 양천구 지양로 4 205호</span></td>
+												<td><span>서울 양천구</span></td>
 											</tr>
 											<tr class="displaynone">
 												<th scope="row">도시</th>
@@ -893,7 +547,7 @@ a:-webkit-any-link {
 											</tr>
 											<tr>
 												<th scope="row">휴대전화</th>
-												<td><span>010-9275-1787</span></td>
+												<td><span>010-1111-1111</span></td>
 											</tr>
 											<tr>
 												<th scope="row">배송메시지</th>
