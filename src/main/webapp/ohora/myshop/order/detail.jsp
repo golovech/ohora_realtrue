@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Order Detail</title>
+<title>ohora 오호라 공식몰</title>
 <link rel="shortcut icon" type="image/x-icon" href="http://localhost/ohora/resources/ohora.ico">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <link rel="stylesheet" href="http://localhost/ohora/resources/detail.css">
@@ -21,7 +21,12 @@
 							<span class="eng_font">order detail</span>
 						</h2>
 					</div>
-
+					<!-- go_top 버튼 -->
+				   <div id="floating">
+					    <div class="go_top">
+					        <span class="icon"></span>
+					    </div>
+					</div>
 					<form id="detailForm" name="detailForm"
 						action="/exec/front/MyShop/OrderCancel/" method="POST"
 						enctype="multipart/form-data">
@@ -735,6 +740,25 @@
 				</div>
 			</div>
 		</div>
+		<script>
+		// go_top 버튼 스크립트
+        $(document).ready(function() {
+            // go_top 버튼 클릭 시 상단으로 부드럽게 이동
+            $('.go_top').on('click', function() {
+                $('html, body').animate({ scrollTop: 0 }, 400);
+                return false;
+            });
+            
+            // 스크롤 이벤트에 따라 go_top 버튼 표시
+            $(window).scroll(function() {
+                if ($(this).scrollTop() > 200) {
+                    $('#floating').fadeIn();
+                } else {
+                    $('#floating').fadeOut();
+                }
+            });
+        });
+		</script>
 	</div>
 
 </body>

@@ -188,12 +188,12 @@
     top: 0;
     right: 0;
     bottom: 0;
-    width: 50%; /* 텍스트 블록이 차지할 너비 */
+    width: 40%; 
     padding: 30px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    transition: all 0.3s ease; /* 부드러운 투명도 전환 효과 */
+    transition: all 0.5s ease; /* 부드러운 투명도 전환 효과 */
 }
 
 /* 텍스트 스타일링 */

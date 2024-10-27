@@ -673,3 +673,36 @@ h4 {
     font-weight: normal;
     background: #eeeeee;
 }
+#floating {
+    position: fixed;
+    bottom: 70px;
+    right: 55px;
+    z-index: 1000; /* 버튼이 다른 요소 위에 위치하도록 설정 */
+    cursor: pointer;
+}
+
+#floating .go_top {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url(/ohora/resources/arrow_top.png) no-repeat center center;
+    background-size: contain;
+}
+
+#floating .go_top:before {
+    content: '';
+    width: 10px;
+    height: 10px;
+    border-top: 2px solid white;
+    border-right: 2px solid white;
+    transform: rotate(-45deg);
+    margin-top: 4px;
+}
+span, a {
+    font-family: inherit;
+    color: inherit;
+    font-size: inherit;
+}
